@@ -1,0 +1,316 @@
+
+
+
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>loyset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href='{{url_for("static",filename="img/logo/iconn.jpg")}}'>
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+    <!-- Ionicons css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+    <!-- linearicons css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/linearicons.css') }}">
+    <!-- Nice select css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nice-select.css') }}">
+    <!-- Jquery fancybox css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.fancybox.css') }}">
+    <!-- Jquery ui price slider css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery-ui.min.css') }}">
+    <!-- Meanmenu css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/meanmenu.min.css') }}">
+    <!-- Nivo slider css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nivo-slider.css') }}">
+    <!-- Owl carousel css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/default.css') }}">
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css') }}">
+
+    <!-- Modernizer js -->
+    <script src="{{ url_for('static',filename='js/vendor/modernizr-3.5.0.min.js') }}"></script>
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+   <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+    <!-- Main Wrapper Start Here -->
+    <div class="wrapper">
+        <!-- Banner Popup Start  -->
+        <div class="popup_banner">
+            <!-- <span class="popup_off_banner">×</span> -->
+            <div class="banner_popup_area">
+                    <img src="{{ url_for('static',filename='img/banner/pop-banner.jpg')}}" alt="">
+            </div>
+        </div>
+       
+        <!-- Banner Popup End -->
+        <!-- Newsletter Popup Start -->
+        <div class="popup_wrapper">
+            <div class="test">
+                <span class="popup_off">Close</span>
+                <div class="subscribe_area text-center mt-60">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to the Truemart mailing list to receive updates on new arrivals, special offers and
+                        other discount information.</p>
+                    <div class="subscribe-form-group">
+                        <form action="#">
+                            <input autocomplete="off" type="text" name="message" id="message"
+                                placeholder="Enter your email address">
+                            <button type="submit">subscribe</button>
+                            
+                        </form>
+                    </div>
+                    <div class="subscribe-bottom mt-15">
+                        <input type="checkbox" id="newsletter-permission">
+                        <label for="newsletter-permission">Don't show this popup again</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter Popup End -->
+        <!-- Main Header Area Start Here -->
+        <header>
+
+            <!-- Header Middle Start Here -->
+            <div class="header-middle ptb-15 black-bg2 home-4">
+                <div class="container">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="logo mb-all-30">
+                                <a href="{{url_for('accueil')}}"><img src='{{url_for("static",filename="img/logo/loyset3.png")}}' alt="logo-image"></a>
+                            </div>
+                        </div> 
+                        <!-- Categorie Search Box Start Here -->
+                        <div class="col-lg-5 col-md-8 ml-auto mr-auto col-10">
+                            <div class="categorie-search-box">
+                                <form action="{{url_for('search')}}" method="POST">
+
+                                    <input type="text" name="val" value="{{val}}" placeholder="Chercher un produit" id="rcherche">
+                                    <button type="submit"><i class="lnr lnr-magnifier"></i></button>
+                                    <div class="row" id="suggest"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Categorie Search Box End Here -->
+                        <!-- Cart Box Start Here -->
+                        <div class="col-lg-4 col-md-12">
+                            <div class="cart-box mt-all-30">
+                                <ul class="d-flex justify-content-lg-end justify-content-center align-items-center">
+                                    <li><a href="#"><i class="lnr lnr-cart"></i><span class="my-cart"><span
+                                                    class="total-pro">2</span><span>cart</span></span></a>
+                                        <ul class="ht-dropdown cart-box-width">
+                                            <li>
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src='{{url_for("static",filename="img/products/1.jpg")}}' alt="cart-image"></a>
+                                                        <span class="pro-quantity">1X</span>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6><a href="/product.html">Printed Summer Red </a></h6>
+                                                        <span class="cart-price">27.45</span>
+                                                        <span>Size: S</span>
+                                                        <span>Color: Yellow</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#"><i class="ion-close"></i></a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Box Start -->
+                                                <div class="single-cart-box">
+                                                    <div class="cart-img">
+                                                        <a href="#"><img src='{{url_for("static",filename="img/products/2.jpg")}}' alt="cart-image"></a>
+                                                        <span class="pro-quantity">1X</span>
+                                                    </div>
+                                                    <div class="cart-content">
+                                                        <h6><a href="product.html">Printed Round Neck</a></h6>
+                                                        <span class="cart-price">45.00</span>
+                                                        <span>Size: XL</span>
+                                                        <span>Color: Green</span>
+                                                    </div>
+                                                    <a class="del-icone" href="#"><i class="ion-close"></i></a>
+                                                </div>
+                                                <!-- Cart Box End -->
+                                                <!-- Cart Footer Inner Start -->
+                                                <div class="cart-footer">
+                                                    <ul class="price-content">
+                                                        <li>Subtotal <span>$57.95</span></li>
+                                                        <li>Shipping <span>$7.00</span></li>
+                                                        <li>Taxes <span>$0.00</span></li>
+                                                        <li>Total <span>$64.95</span></li>
+                                                    </ul>
+                                                    <div class="cart-actions text-center">
+                                                        <a class="cart-checkout" href="checkout.html">Checkout</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Cart Footer Inner End -->
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="lnr lnr-heart"></i><span
+                                                class="my-cart"><span>Wish</span><span>list (0)</span></span></a>
+                                    </li>
+                                    <li><a href="#"><i class="lnr lnr-user"></i><span class="my-cart"><span>
+                                                    <strong>Sign in</strong> Or</span><span> Join My
+                                                    Site</span></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Cart Box End Here -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Header Middle End Here -->
+            <!-- Header Bottom Start Here -->
+            <div class="header-bottom  header-sticky">
+                <div class="container">
+
+                </div>
+                <!-- Container End -->
+            </div>
+
+        </header>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+  var rcherche = document.getElementById("rcherche")
+  var suggest = document.getElementById("suggest")
+  var verif = false
+
+  rcherche.onkeyup = function() {
+    var val = rcherche.value
+    if(val.length >= 1){ verif = true }else{ verif = false }
+
+    if (verif === true) {
+      fetch('/query/'+val)        
+      .then(function(res) {
+        res.json()
+        .then(function(data) {
+          line = ''
+          //let result = data['data']
+          data.map(function(d){
+              line = line + `
+              <a href="` + d.source + `" target="_blank" > 
+                
+                <div id="afficher">
+                  <div id ="titr" class="col-sm-12"> 
+                    <h5 ><b>` + d.nom + `</b> </h5> 
+                    <span>` + d.prix + `</span> 
+                    <img class="test" src="` + d.image + `" alt="`+ d.alt +`" >
+                  </div>
+                </div>
+              </a> 
+              `
+          })
+          var plus = `<a href="/session">
+                        <div id="afficher">
+                          <h5 class="voir"><b> VOIR TOUS LES RESULTATS POUR ` + val + `</b></h5> 
+                        </div>
+                      </a>`
+          line = line + plus
+          suggest.innerHTML = '<ul>' + line + '</ul>'
+        })
+      });
+    }
+    
+  }
+
+  
+</script>
+ <!-- Main Header Area End Here -->
+ <style>
+     .test {
+        width: 40px;
+        height: 30px;
+        padding: 5px;
+        margin-right: 0px;
+      }
+      /* #afficher img {
+        width: 25px;
+        height: 25px;
+        padding: 0px;
+        float: left;
+        position: absolute;
+        top: 7px;
+        left: 0px;
+        bottom: 7px;
+      
+        } */
+        h5{
+          margin-left: 7%;
+          color:  #000;
+          font-size: 80%;
+        }
+        span{
+          margin-left: 7%;
+          color:  rgb(109, 9, 2);
+          font-size: 70%;
+          }
+    #suggest{
+      position: relative;
+      width: 100%;
+      left: 0;
+      padding: 0px;
+      margin: 0px;
+      border: #000;
+    
+    }
+
+    #afficher{
+      position: relative;
+      width: 90%;
+      margin: 0px 0px;
+      margin-left: 0px;
+      padding: 2px 10px;
+      background-color:rgb(236, 231, 231);
+      display: flex;
+      float: left;
+      
+    }
+    #afficher:hover{
+      background-color: rgb(161, 159, 159);
+      border: 1px solid #fff;
+      height: 10%;
+    }
+    #titr,h5 {
+      margin:0px;
+      padding:0px;
+      
+    }
+    #titr,span {
+      margin:0px;
+      padding:0px;
+    }
+    .voir{
+      color:rgb(158, 23, 5);
+      margin-left: 25%;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      border: 1px solid #eee;
+    }
+    .voir:hover{
+      background-color: rgb(238, 225, 113);
+      border: 1px solid #fff;
+    }
+   
+    
+  </style>
